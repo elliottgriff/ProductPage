@@ -14,6 +14,12 @@
 		4F6CFF7B2806116000E8F8EA /* ProductPage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CFF792806116000E8F8EA /* ProductPage.xcdatamodeld */; };
 		4F6CFF7D2806116200E8F8EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CFF7C2806116200E8F8EA /* Assets.xcassets */; };
 		4F6CFF802806116200E8F8EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CFF7E2806116200E8F8EA /* LaunchScreen.storyboard */; };
+		4F6CFF8C280611A700E8F8EA /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CFF8A280611A700E8F8EA /* Product.swift */; };
+		4F6CFF8D280611A700E8F8EA /* ProductManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CFF8B280611A700E8F8EA /* ProductManager.swift */; };
+		4F6CFF902806121600E8F8EA /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CFF8E2806121600E8F8EA /* ProductTableViewCell.swift */; };
+		4F6CFF912806121600E8F8EA /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F6CFF8F2806121600E8F8EA /* ProductTableViewCell.xib */; };
+		4F6CFF942806128000E8F8EA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 4F6CFF932806128000E8F8EA /* Kingfisher */; };
+		4F6CFF962806129900E8F8EA /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6CFF952806129900E8F8EA /* CartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,11 @@
 		4F6CFF7C2806116200E8F8EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F6CFF7F2806116200E8F8EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4F6CFF812806116200E8F8EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F6CFF8A280611A700E8F8EA /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		4F6CFF8B280611A700E8F8EA /* ProductManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductManager.swift; sourceTree = "<group>"; };
+		4F6CFF8E2806121600E8F8EA /* ProductTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		4F6CFF8F2806121600E8F8EA /* ProductTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		4F6CFF952806129900E8F8EA /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6CFF942806128000E8F8EA /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +70,45 @@
 		4F6CFF6F2806116000E8F8EA /* ProductPage */ = {
 			isa = PBXGroup;
 			children = (
+				4F6CFF892806117700E8F8EA /* controller */,
+				4F6CFF882806117100E8F8EA /* view */,
+				4F6CFF872806116B00E8F8EA /* model */,
 				4F6CFF702806116000E8F8EA /* AppDelegate.swift */,
 				4F6CFF722806116000E8F8EA /* SceneDelegate.swift */,
-				4F6CFF742806116000E8F8EA /* ViewController.swift */,
-				4F6CFF762806116000E8F8EA /* Main.storyboard */,
 				4F6CFF7C2806116200E8F8EA /* Assets.xcassets */,
 				4F6CFF7E2806116200E8F8EA /* LaunchScreen.storyboard */,
 				4F6CFF812806116200E8F8EA /* Info.plist */,
 				4F6CFF792806116000E8F8EA /* ProductPage.xcdatamodeld */,
 			);
 			path = ProductPage;
+			sourceTree = "<group>";
+		};
+		4F6CFF872806116B00E8F8EA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4F6CFF8A280611A700E8F8EA /* Product.swift */,
+				4F6CFF8B280611A700E8F8EA /* ProductManager.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		4F6CFF882806117100E8F8EA /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4F6CFF762806116000E8F8EA /* Main.storyboard */,
+				4F6CFF8E2806121600E8F8EA /* ProductTableViewCell.swift */,
+				4F6CFF8F2806121600E8F8EA /* ProductTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4F6CFF892806117700E8F8EA /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4F6CFF742806116000E8F8EA /* ViewController.swift */,
+				4F6CFF952806129900E8F8EA /* CartViewController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +127,9 @@
 			dependencies = (
 			);
 			name = ProductPage;
+			packageProductDependencies = (
+				4F6CFF932806128000E8F8EA /* Kingfisher */,
+			);
 			productName = ProductPage;
 			productReference = 4F6CFF6D2806116000E8F8EA /* ProductPage.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 4F6CFF642806116000E8F8EA;
+			packageReferences = (
+				4F6CFF922806128000E8F8EA /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 4F6CFF6E2806116000E8F8EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -129,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6CFF802806116200E8F8EA /* LaunchScreen.storyboard in Resources */,
+				4F6CFF912806121600E8F8EA /* ProductTableViewCell.xib in Resources */,
 				4F6CFF7D2806116200E8F8EA /* Assets.xcassets in Resources */,
 				4F6CFF782806116000E8F8EA /* Main.storyboard in Resources */,
 			);
@@ -142,7 +190,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F6CFF752806116000E8F8EA /* ViewController.swift in Sources */,
+				4F6CFF8D280611A700E8F8EA /* ProductManager.swift in Sources */,
+				4F6CFF902806121600E8F8EA /* ProductTableViewCell.swift in Sources */,
 				4F6CFF712806116000E8F8EA /* AppDelegate.swift in Sources */,
+				4F6CFF962806129900E8F8EA /* CartViewController.swift in Sources */,
+				4F6CFF8C280611A700E8F8EA /* Product.swift in Sources */,
 				4F6CFF7B2806116000E8F8EA /* ProductPage.xcdatamodeld in Sources */,
 				4F6CFF732806116000E8F8EA /* SceneDelegate.swift in Sources */,
 			);
@@ -362,6 +414,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4F6CFF922806128000E8F8EA /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4F6CFF932806128000E8F8EA /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4F6CFF922806128000E8F8EA /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		4F6CFF792806116000E8F8EA /* ProductPage.xcdatamodeld */ = {
